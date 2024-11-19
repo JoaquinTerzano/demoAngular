@@ -1,0 +1,21 @@
+<p>docente-crear works!</p>
+
+<form [formGroup]="docenteForm()" (ngSubmit)="onSubmit()">
+
+  <mat-form-field appearance="fill">
+    <mat-label>Legajo</mat-label>
+    <input matInput formControlName="legajo" type="number">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="nombre">
+  </mat-form-field>
+
+  <br>
+
+  <button mat-button type="submit">Crear</button>
+
+</form>

@@ -1,0 +1,33 @@
+
+<p>alumno works!😎</p>
+
+<mat-form-field>
+  <mat-label>Filtrar por ID</mat-label>
+  <input matInput type="text" (keyup)="applyFilter($event)" placeholder="ID del alumno">
+</mat-form-field>
+
+<button mat-icon-button routerLink="/curso/alumnos/inscribir" color="primary" [queryParams]="{id: this.cursoId}">
+  <mat-icon>person_add</mat-icon>
+</button>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  @for(column of displayedColumns; track $index){
+    <ng-container matColumnDef="{{ column }}">
+      <th mat-header-cell *matHeaderCellDef> {{ column }} </th>
+      <td mat-cell *matCellDef="let element">
+        {{ element[column] }}
+        @if(column === 'Dar de baja') {
+        <button mat-icon-button color="warn" (click)="darDeBajaAlumno(element.id)">
+          <mat-icon>person_off</mat-icon>
+        </button>
+        }
+      </td>
+    </ng-container>
+  }
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<!--
+-->

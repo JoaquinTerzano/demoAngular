@@ -1,0 +1,22 @@
+<p>alumno-actualizar works!</p>
+
+<form [formGroup]="temaForm()" (ngSubmit)="onSubmit()">
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="nombre">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Descripción</mat-label>
+    <input matInput formControlName="descripcion">
+    <mat-hint>Límite de caracteres: 255</mat-hint>
+  </mat-form-field>
+
+  <br>
+
+  <button mat-button type="submit">Actualizar</button>
+
+</form>

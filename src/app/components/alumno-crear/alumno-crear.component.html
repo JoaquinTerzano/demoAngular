@@ -1,0 +1,22 @@
+<p>alumno-crear works!</p>
+
+<form [formGroup]="alumnoForm()" (ngSubmit)="onSubmit()">
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="nombre">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha de nacimiento</mat-label>
+    <input matInput formControlName="fechaNacimiento">
+    <mat-hint>DD-MM-YYYY</mat-hint>
+  </mat-form-field>
+
+  <br>
+
+  <button mat-button type="submit">Crear</button>
+
+</form>

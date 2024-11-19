@@ -1,0 +1,44 @@
+<p>curso-actualizar works!</p>
+
+<form [formGroup]="cursoForm()" (ngSubmit)="onSubmit()">
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre del tema</mat-label>
+    <input matInput formControlName="tema">
+  </mat-form-field>
+  
+  <br>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha de inicio</mat-label>
+    <input matInput formControlName="fechaInicio">
+    <mat-hint>DD-MM-YYYY</mat-hint>
+  </mat-form-field>
+  
+  <br>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha de finalización</mat-label>
+    <input matInput formControlName="fechaFin">
+    <mat-hint>DD-MM-YYYY</mat-hint>
+  </mat-form-field>
+  
+  <br>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Legajo del docente</mat-label>
+    <input matInput formControlName="legajo">
+  </mat-form-field>
+  
+  <br>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Precio</mat-label>
+    <input matInput formControlName="precio">
+  </mat-form-field>
+  
+  <br>
+  
+  <button mat-button type="submit">Crear</button>
+
+</form>
